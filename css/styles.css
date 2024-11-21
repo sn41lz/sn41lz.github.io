@@ -1,0 +1,438 @@
+/*estilos de body*/
+body {
+  background-color: rgb(16, 16, 25); 
+  color: white;
+  background-image: url(../img/background.jpeg);
+  background-position: right 50px  top 220px;
+  background-repeat: no-repeat;
+  background-size: 600px 600px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  overflow-x: hidden;
+}
+/*estilos de barra separadora*/
+br {
+display: block;
+margin: 50px;
+}
+/*estilos de banner*/
+.banner {
+  background-image:url(../img/icon.svg);
+  background-size: 170px  170px;
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+h1 {
+  text-align: center;
+  font-family: 'Akira Expanded', sans-serif;
+}
+nav {
+  overflow: hidden;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display:flex;
+}
+nav ul {
+  flex: 1;
+}
+nav ul li a {
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+}
+nav ul li a:hover {
+background-color:  #291342;
+}
+/*fuente personalizada*/
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url(akira_expanded/Akira-Expanded.ttf) format('truetype');
+}
+/*estilos del anuncio de cookies*/
+#cookie-notice {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(41, 19, 66, 0.9);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#cookie-consent {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+#cookie-consent:checked ~ #cookie-notice {
+  display: none;
+}
+#cookie-consent:hover {
+  background-color:aliceblue;
+}
+
+#cookie-notice {
+  animation: fadeOut 5s forwards;
+}
+a {
+text-decoration: none;
+}
+span {
+display: inline;
+font-weight: normal;
+color: inherit;
+background: none;
+padding: 0;
+margin: 0;
+color: white;
+text-decoration: none;
+}
+/*animación suave de salida*/
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  95% { opacity: 0.8; }
+  100% { opacity: 0; display: none; }
+}
+#sobremi {
+margin-bottom: 250px;
+}
+/*contenedor de biografía*/
+.bio-card {
+  background-color: #291342;
+  border-radius: 15px;
+  padding: 40px;
+  margin: 40px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 700px;
+}
+
+.bio-card h2 {
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon img {
+  width: 40px;
+  transition: filter 0.3s;
+}
+/*efecto de las imágenes al pasar el ratón por encima*/
+.social-icon:hover img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(92%) saturate(586%) hue-rotate(191deg) brightness(103%) contrast(98%);
+}
+:root {
+  --card-height: 280px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+* {
+  box-sizing: border-box;
+}
+#proyectos {
+  background-color: whitesmoke;
+  color:#000;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  margin-bottom: 40px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+/*estilo de las imágenes al pasar el ratón por encima*/
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+.title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+.project {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+.card:hover .project {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+#proyectos p {
+  margin-right: 800px;
+  color: #000;
+}
+#proyectos span {
+  text-decoration: none;
+  color: #000;
+}
+#foto {
+  background-image: url(../img/programsnail.jpeg);
+  background-size: 400px;
+  background-repeat: no-repeat;
+}
+#habilidades {
+  margin-left: 40%;
+}
+/*estilo de las barras de habilidades*/
+.skill-bars {
+  padding: 25px 30px;
+  width: 600px;
+  background:#291342;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.skill-bars .bar {
+  margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+/*animación para el texto*/
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: fuchsia;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+  width: 90%;
+}
+
+.bar .progress-line.css span {
+  width: 70%;
+}
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-line.html span::after {
+  content: "90%";
+}
+
+.progress-line.css span::after {
+  content: "70%";
+}
+/*estilo del apartado de contacto*/
+#contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-image: url('../img/fondo\ form.jpg');
+  background-size: cover;
+  background-position: center;
+  margin-top: 10%;
+}
+/*estilo del contenedor*/
+.form-container {
+  background-color: rgba(41, 19, 66, 0.9); 
+  padding: 40px;
+  border-radius: 15px;
+  width: 60%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border 0.3s, background-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #8d35e2;
+  background-color: #f0f8ff;
+  outline: none;
+}
+/*estilo del botón de enviar*/
+button {
+  padding: 10px 15px;
+  background-color: #8d35e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #7d30c5;
+  transform: scale(1.05);
+}
+/*estilo del footer*/
+footer {
+text-align: center;
+}
+
+

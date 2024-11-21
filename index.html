@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="img/icon.svg" type="image/x-icon"> <!--Favicon-->
+    <link rel="stylesheet" href="css/styles.css"> <!--Estilos de CSS-->
+</head>
+<body>  
+    <header class="banner"> <!--Banner de la página-->
+        <hr color="#8d35e2"> <!--Barra separadora con color-->
+        <h1>PORTAFOLIO</h1>
+        <nav> <!--Anclas a las diferentes secciones de la pagina-->
+            <ul>
+                <li><a href="#sobremi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Galería de Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <hr color="#8d35e2">
+    </header>
+    <main>
+      <section class="cookies"> <!--Sección para el apartado de las cookies-->
+        <input type="checkbox" id="cookie-consent" style="display: none;">
+        <div id="cookie-notice">
+            Este sitio utiliza cookies para mejorar la experiencia 
+                <label for="cookie-consent"> 
+                    <span>.   Aceptar</span></label>
+        </div>
+        <section id="sobremi"> <!--Sección para mi biografía-->
+            <div class="bio-card" class="social-icons">
+                <h2>Sobre Mí</h2>
+                <p>Soy Sergi Espí Zamora, un apasionado del desarrollo web y los videojuegos. Estudié el Bachillerato Técnico, lo cual me dio una buena base en tecnología y me motivó a seguir en este campo. Actualmente, estoy cursando mi primer año de Administración de Sistemas Informáticos en Red (ASIR), donde aprendo sobre redes, sistemas operativos y administración de servidores. Me encanta explorar y experimentar con código, y aspiro a combinar mi pasión por la programación y los videojuegos para crear soluciones innovadoras en tecnología.
+                    </p>
+                    <!--Diferentes enlaces vacíos para redes sociales-->
+                <a href="#" class="social-icon"><img src="img/youtube.png" alt="YouTube"></a>
+                <a href="#" class="social-icon"><img src="img/twitter.png" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                <a href="#" class="social-icon"><img src="img/instagram.png" alt="Instagram"></a>
+            </div>
+      </section>
+        <h2>Galería de Proyectos</h2>
+      <section id="proyectos"> <!--Sección de Proyectos-->
+            <a href="pdf/Windows 11.pdf" target="_blank"> <!--Abre el pdf en otra pestaña-->
+                <div class="card">
+                  <div class="wrapper">
+                    <img src="img/projects/windows 11.png" class="cover-image" />  <!--Imagen de fondo-->
+                  </div>
+                  <img src="img/projects/logo windows 11.png" class="project" />   <!--Imagen del proyecto-->
+                </div>
+                <span>Windows 11 es la versión más reciente del sistema operativo de Microsoft, lanzada
+                  en octubre de 2021.</span>   <!--Descripción del proyecto-->
+
+              </a>
+              <a href="pdf/Windows Server 2025.pdf" target="_blank">
+                <div class="card">
+                  <div class="wrapper">
+                    <img src="img/projects/Windows Server 2025.png" class="cover-image" />
+                  </div>
+                  <img src="img/projects/loog windows server 2025.png" class="project" />
+                </div>
+                <span>Windows Server 2025 es la próxima versión del sistema operativo de Microsoft
+                  diseñado para servidores.</span>
+              </a>
+              <a href="pdf/Blackbox y depuración de código.pdf" target="_blank">
+                <div class="card">
+                  <div class="wrapper">
+                    <img src="img/projects/Blackbox y depuración de código-1.png" class="cover-image" />
+                  </div>
+                  <img src="img/projects/blackbox logo.png" class="project"/>
+                </div>
+                <span>La depuración de código es un proceso crucial en el desarrollo de software que
+                  implica identificar y corregir errores en el código fuente.</span>
+              </a>
+              <a href="pdf/Ingeniería de Prompts.pdf" target="_blank">
+                <div class="card">
+                  <div class="wrapper">
+                    <img src="img/projects/Ingeniería de Prompts-1.png" class="cover-image" />
+                  </div>
+                  <img src="img/projects/prompt.png" class="project" />
+                </div>
+                <span>Recientemente, los modelos de lenguaje han revolucionado nuestra forma de
+                  interactuar con las máquinas, permitiéndonos comunicarnos con ellas de manera
+                  más natural.</span>
+              </a>
+              <a href="pdf/Ejercicios Transformación.pdf" target="_blank">
+                <div class="card">
+                  <div class="wrapper">
+                    <img src="img/projects/Ejercicios Transformación-1.png" class="cover-image" />
+                  </div>
+                  <img src="img/projects/bases de datos.webp" class="project" />
+                </div>
+                <span>La transformación de un modelo Entidad-Relación (E-R) a un modelo relacional es
+                  un paso clave en el diseño de bases de datos.</span>
+              </a>
+              <a href="pdf/Modelo de Capas.pdf" target="_blank">
+                <div class="card">
+                  <div class="wrapper">
+                    <img src="img/projects/Modelo de Capas-1.png" class="cover-image" />
+                  </div>
+                  <img src="img/projects/packet tracer.png" class="project" />
+                </div>
+                <span>El modelo de capas (OSI) es un marco que organiza las funciones de red en 7 niveles,
+                   facilitando la comunicación entre sistemas. Cada capa tiene funciones específicas, desde
+                    la transmisión física hasta la aplicación de usuario.</span>
+              </a>
+        </section> 
+        <h2>Habilidades y Conocimientos</h2> 
+        <section id="foto">
+          <section id="habilidades"> <!--Sección de habiliades-->
+            <br>
+            <p>He estudiado <b>HTML</b> y <b>CSS</b>, los lenguajes básicos para el desarrollo web. Con HTML aprendo 
+              a estructurar el contenido de una página, como los títulos, párrafos e imágenes, mientras que con
+              CSS puedo darle estilo y diseño, definiendo colores, tipografías y disposiciones visuales. Con estos
+              conocimientos, ya puedo crear páginas web básicas y con estilo.</p>
+            <br>
+            <div class="skill-bars"> <!--Barras de progresos de los diferentes lenguajes-->
+              <div class="bar">
+                <div class="info">
+                  <span>HTML</span>
+                </div>
+                <div class="progress-line html">
+                  <span></span>
+                </div>
+              </div>
+          
+              <div class="bar">
+                <div class="info">
+                <span>CSS</span>
+              </div>
+              <div class="progress-line css">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="contacto">  <!--Sección de contacto-->
+        <div class="form-container">
+          <h2>Formulario de Contacto</h2>
+          <p>¿Quieres contratarme? ¡Hablemos!</p>
+          <form action="#" method="post">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+              <label for="correo">Correo electrónico:</label>
+              <input type="email" id="correo" name="correo" required placeholder="Tu correo electrónico" />
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí"></textarea>
+              <button type="submit">Enviar</button> <!--Botón de envío-->
+          </form>
+      </div>
+      </section>
+    </main>
+    <hr color="#8d35e2">
+    <footer>
+      <p>&copy; 2024 Sergi Espi Zamora</p>
+    </footer>
+</body>
+</html>
